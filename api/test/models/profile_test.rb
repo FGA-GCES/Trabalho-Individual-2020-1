@@ -82,7 +82,7 @@ class ProfileTest < ActiveSupport::TestCase
     assert_equal(@valid_profile.update(url: nil), false)
     assert_equal(@valid_profile.update(url: ''), false)
 
-    assert_equal(before, Profile.count())
+    assert_equal(before, (Profile.count() - 1))
   end
 
 end
